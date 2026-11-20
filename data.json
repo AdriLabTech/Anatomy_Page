@@ -1,0 +1,2843 @@
+[
+  {
+    "imagen": "images/sin_nombres/1.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Hueso Parietal",
+        "x": 474,
+        "y": 378,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Frontal",
+        "x": 819,
+        "y": 387,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Osificacion central",
+        "x": 525,
+        "y": 450,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela posterior",
+        "x": 351,
+        "y": 564,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Occipital",
+        "x": 492,
+        "y": 798,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela mastoidea",
+        "x": 492,
+        "y": 729,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela esfenoidal",
+        "x": 768,
+        "y": 630,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Temporal",
+        "x": 624,
+        "y": 723,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Frontal",
+        "x": 507,
+        "y": 1056,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura frontal",
+        "x": 687,
+        "y": 966,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela anterior",
+        "x": 693,
+        "y": 1059,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela posterior",
+        "x": 681,
+        "y": 1509,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Parietal",
+        "x": 873,
+        "y": 1407,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Occipital",
+        "x": 753,
+        "y": 1548,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/2.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Frente",
+        "x": 717,
+        "y": 480,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nasion",
+        "x": 726,
+        "y": 754,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco cigomático",
+        "x": 1086,
+        "y": 1017,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Gnathion",
+        "x": 722,
+        "y": 1609,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio piriforme",
+        "x": 706,
+        "y": 1007,
+        "width": 170,
+        "height": 170
+      },
+      {
+        "nombre": "orbita",
+        "x": 465,
+        "y": 858,
+       "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/3.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Fontanela anterior",
+        "x": 682,
+        "y": 168,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "eminencia parietal",
+        "x": 883,
+        "y": 367,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "sutura coronal",
+        "x": 638,
+        "y": 304,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "eminencia frontal",
+        "x": 487,
+        "y": 320,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela posterior",
+        "x": 1041,
+        "y": 490,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Escama occipital",
+        "x": 1023,
+        "y": 567,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura lambdoidea",
+        "x": 933,
+        "y": 598,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela mastoidea",
+        "x": 819,
+        "y": 651,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Porcion petrosa del hueso tamporal",
+        "x": 782,
+        "y": 634,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Occipital porcion lateral",
+        "x": 757,
+        "y": 677,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Anillo timpatico",
+        "x": 673,
+        "y": 661,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "porcion escamosa del hueso temporal",
+        "x": 649,
+        "y": 575,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Mandibula",
+        "x": 355,
+        "y": 647,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio piriforme nasal anterior",
+        "x": 341,
+        "y": 542,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso cigomatico",
+        "x": 481,
+        "y": 563,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ala mayor del hueso esfenoides",
+        "x": 528,
+        "y": 497,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela anterior",
+        "x": 729,
+        "y": 1047,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Parietal",
+        "x": 796,
+        "y": 1016,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "sutura coronal",
+        "x": 858,
+        "y": 1057,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio supraorbitario",
+        "x": 919,
+        "y": 1359,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Temporal",
+        "x": 1016,
+        "y": 1450,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso cigomatico",
+        "x": 957,
+        "y": 1562,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Mandibula",
+        "x": 911,
+        "y": 1660,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sinfisis de la mandibula",
+        "x": 746,
+        "y": 1728,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Maxilar",
+        "x": 689,
+        "y": 1595,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio mentoniano",
+        "x": 623,
+        "y": 1698,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Diente decidual",
+        "x": 645,
+        "y": 1594,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio infraorbitario",
+        "x": 624,
+        "y": 1553,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Tabique nasal",
+        "x": 742,
+        "y": 1507,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ala mayor del hueso esfenoides",
+        "x": 564,
+        "y": 1474,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso nasal",
+        "x": 726,
+        "y": 1442,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis frontal del maxilar",
+        "x": 715,
+        "y": 1414,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso fronal",
+        "x": 551,
+        "y": 1213,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura frontal",
+        "x": 724,
+        "y": 1142,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/4.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Porcion escamosa del hueso frontal",
+        "x": 728,
+        "y": 629,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutrura frontonasal",
+        "x": 750,
+        "y": 876,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura frontomaxilar",
+        "x": 769,
+        "y": 898,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio supraorbitario",
+        "x": 899,
+        "y": 814,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Parietal",
+        "x": 1056,
+        "y": 732,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura esfenoparietal",
+        "x": 1027,
+        "y": 821,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cara orbitaria del ala mayor del hueso esfenoides",
+        "x": 890,
+        "y": 937,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso temporal",
+        "x": 1065,
+        "y": 876,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura frontocigomática",
+        "x": 1038,
+        "y": 906,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso lacrimal",
+        "x": 784,
+        "y": 934,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura esfenocigomática",
+        "x": 934,
+        "y": 1008,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura nasomaxilar",
+        "x": 764,
+        "y": 955,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio infraorbitario",
+        "x": 889,
+        "y": 1097,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cornete nasal medio",
+        "x": 743,
+        "y": 1034,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cornete nasal inferior",
+        "x": 763,
+        "y": 1125,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Rama de la mandibula",
+        "x": 965,
+        "y": 1358,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura intermaxilar",
+        "x": 711,
+        "y": 1257,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cuerpo de la mandibula",
+        "x": 688,
+        "y": 1494,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio mentoniano",
+        "x": 571,
+        "y": 1494,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Espina nasal anterior",
+        "x": 712,
+        "y": 1198,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis alveolar del hueso maxilar",
+        "x": 570,
+        "y": 1285,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Vomez",
+        "x": 709,
+        "y": 1140,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso etmoides",
+        "x": 712,
+        "y": 1020,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura cigomaticomaxilar",
+        "x": 408,
+        "y": 1194,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Borde infraorbitario",
+        "x": 489,
+        "y": 1074,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fisura orbitaria inferior",
+        "x": 500,
+        "y": 1053,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso cigomático",
+        "x": 444,
+        "y": 1037,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ala mayor del hueso esfenoides",
+        "x": 551,
+        "y": 986,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ala menor del hueso esfenoides",
+        "x": 614,
+        "y": 947,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fisura orbitaria superior",
+        "x": 581,
+        "y": 935,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis cigomatica del hueso frontal",
+        "x": 385,
+        "y": 885,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cara orbitaria del hueso frontal",
+        "x": 480,
+        "y": 892,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ala mayor del hueso esfenoides",
+        "x": 370,
+        "y": 848,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Angulo esfenoidal del hueso parietal",
+        "x": 344,
+        "y": 747,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura coronal",
+        "x": 353,
+        "y": 716,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Borde supraorbitario",
+        "x": 463,
+        "y": 851,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura esfenofrontal",
+        "x": 543,
+        "y": 879,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura frontolacrimal",
+        "x": 636,
+        "y": 928,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis frontal del hueso maxilar",
+        "x": 660,
+        "y": 946,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso nasal",
+        "x": 694,
+        "y": 936,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura internasal",
+        "x": 718,
+        "y": 910,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/5.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Sutura frontal",
+        "x": 652,
+        "y": 93,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso frontal porcion escamosa",
+        "x": 827,
+        "y": 168,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura coronal",
+        "x": 870,
+        "y": 246,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Parietal",
+        "x": 965,
+        "y": 479,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela posterior menor",
+        "x": 663,
+        "y": 803,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "hueso occipital escama occipital",
+        "x": 725,
+        "y": 868,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura sagital",
+        "x": 669,
+        "y": 702,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela anterior mayor",
+        "x": 659,
+        "y": 222,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela posterior menor",
+        "x": 728,
+        "y": 1080,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Parietal",
+        "x": 966,
+        "y": 1203,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Porcion lateral del hueso occipital",
+        "x": 791,
+        "y": 1493,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio lateral del hueso occipital",
+        "x": 697,
+        "y": 1526,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis palatina del maxilar",
+        "x": 709,
+        "y": 1765,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Mandibula",
+        "x": 709,
+        "y": 1839,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "vomez",
+        "x": 689,
+        "y": 1674,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Anillo timpatico",
+        "x": 574,
+        "y": 1563,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "porcion escamosa del hueso temporal",
+        "x": 475,
+        "y": 1493,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Porcion petrosa del hueso temporal",
+        "x": 529,
+        "y": 1454,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Fontanela mastoidea",
+        "x": 520,
+        "y": 1371,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura occipital transversal",
+        "x": 534,
+        "y": 1332,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "hueso occipital escama occipital",
+        "x": 592,
+        "y": 1236,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/7.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "sutura sagital",
+        "x": 713,
+        "y": 593,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Orificio parietal",
+        "x": 811,
+        "y": 719,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso parietal",
+        "x": 984,
+        "y": 807,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Huesos de Sutura",
+        "x": 970,
+        "y": 990,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura occipital transversal",
+        "x": 825,
+        "y": 1027,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso temporal",
+        "x": 1152,
+        "y": 1093,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso Occipital",
+        "x": 942,
+        "y": 1178,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Protuberancia occipital externa",
+        "x": 751,
+        "y": 1225,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis estiloides",
+        "x": 465,
+        "y": 1302,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Escoltadura mastoidea",
+        "x": 417,
+        "y": 1289,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "orificio mastoideo",
+        "x": 411,
+        "y": 1219,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura occipitomastoidea",
+        "x": 416,
+        "y": 1165,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "sutura escamosa",
+        "x": 313,
+        "y": 1025,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "hueso interparietal",
+        "x": 736,
+        "y": 928,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura lambdoidea",
+        "x": 671,
+        "y": 814,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "orificio parietal",
+        "x": 668,
+        "y": 642,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/8.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Apofisis mastoidea",
+        "x": 974,
+        "y": 764,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Conducto auditivo externo",
+        "x": 904,
+        "y": 728,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Atlas",
+        "x": 910,
+        "y": 821,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis estiloides",
+        "x": 874,
+        "y": 836,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento estilomandibular",
+        "x": 839,
+        "y": 874,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Vertebra C3",
+        "x": 890,
+        "y": 948,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Vertebra C7",
+        "x": 874,
+        "y": 1219,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Vertebra T1",
+        "x": 865,
+        "y": 1272,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "1º Costilla",
+        "x": 901,
+        "y": 1336,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Traquea",
+        "x": 767,
+        "y": 1213,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cartilago cricoides",
+        "x": 757,
+        "y": 1162,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cartilago tiroides",
+        "x": 762,
+        "y": 1108,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "epiglotis",
+        "x": 782,
+        "y": 1050,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Asta mayor",
+        "x": 850,
+        "y": 976,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Asta menor",
+        "x": 767,
+        "y": 995,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cuerpo",
+        "x": 737,
+        "y": 1008,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento estilohioideo",
+        "x": 801,
+        "y": 956,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cuerpo",
+        "x": 659,
+        "y": 945,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "angulo",
+        "x": 797,
+        "y": 911,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "rama",
+        "x": 757,
+        "y": 853,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "lamina lateral de la apofisis pterigoides",
+        "x": 764,
+        "y": 779,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis coronoides de la mandibula",
+        "x": 740,
+        "y": 737,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Escotadura mandibular",
+        "x": 804,
+        "y": 754,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis condilar de la mandibula",
+        "x": 837,
+        "y": 717,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco cigomático",
+        "x": 828,
+        "y": 696,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "fosa temporal",
+        "x": 821,
+        "y": 654,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso esfenoides",
+        "x": 754,
+        "y": 585,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso temporal",
+        "x": 887,
+        "y": 580,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/9.png",
+    "sistema": "esqueletico",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Huesos nasales",
+        "x": 693,
+        "y": 269,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "eminencia frontal",
+        "x": 930,
+        "y": 452,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "bregma",
+        "x": 699,
+        "y": 740,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Vertice",
+        "x": 698,
+        "y": 1014,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Apofisis mastoidea",
+        "x": 974,
+        "y": 764,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "orificios parietales",
+        "x": 835,
+        "y": 1277,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura lambdoidea borde lambdoideo",
+        "x": 803,
+        "y": 1438,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Occipucio",
+        "x": 710,
+        "y": 1482,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Escama occipital",
+        "x": 632,
+        "y": 1470,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura sagital",
+        "x": 671,
+        "y": 1155,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "eminencia parietal",
+        "x": 366,
+        "y": 1070,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "linea temporal inferior",
+        "x": 246,
+        "y": 882,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso parietal",
+        "x": 527,
+        "y": 811,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "linea temporal superior",
+        "x": 330,
+        "y": 704,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Sutura coronal",
+        "x": 601,
+        "y": 715,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/10.png",
+    "sistema": "nervioso",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "nervio olfativo",
+        "x": 635,
+        "y": 758,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio optico",
+        "x": 633,
+        "y": 974,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio motor ocular comun",
+        "x": 633,
+        "y": 1050,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio patetico",
+        "x": 665,
+        "y": 1154,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio trigemino",
+        "x": 818,
+        "y": 1124,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio motor ocular externo",
+        "x": 592,
+        "y": 1241,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio facial",
+        "x": 740,
+        "y": 1240,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio auditivo",
+        "x": 721,
+        "y": 1279,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio glosofaríngeo",
+        "x": 695,
+        "y": 1313,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio neumogastico",
+        "x": 703,
+        "y": 1346,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio espinal",
+        "x": 643,
+        "y": 1375,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio hipogloso",
+        "x": 619,
+        "y": 1346,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/11.png",
+    "sistema": "nervioso",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Cisura de Rolando",
+        "x": 785,
+        "y": 1199,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cuerpo calloso",
+        "x": 738,
+        "y": 1369,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "glandula pineal",
+        "x": 779,
+        "y": 1445,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cisura calcarina",
+        "x": 979,
+        "y": 1524,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cerebelo",
+        "x": 867,
+        "y": 1582,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Bulbo raquideo",
+        "x": 770,
+        "y": 1703,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Protuberancia anular",
+        "x": 713,
+        "y": 1594,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Pedunculo cerebral",
+        "x": 713,
+        "y": 1488,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hipofisis",
+        "x": 604,
+        "y": 1533,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio optico",
+        "x": 582,
+        "y": 1506,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Comisura anterior",
+        "x": 604,
+        "y": 1424,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Trigono",
+        "x": 594,
+        "y": 1389,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "lobulo frontal",
+        "x": 371,
+        "y": 1291,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/13.png",
+    "sistema": "nervioso",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Surco frontal superior",
+        "x": 776,
+        "y": 569,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Surco frontal inferior",
+        "x": 908,
+        "y": 621,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco precentral",
+        "x": 979,
+        "y": 855,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco central",
+        "x": 1077,
+        "y": 908,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco postcentral",
+        "x": 1058,
+        "y": 1065,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco intraparietal",
+        "x": 948,
+        "y": 1339,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco del cingulo",
+        "x": 740,
+        "y": 1348,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco parietoocipital",
+        "x": 737,
+        "y": 1424,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Polo occipital",
+        "x": 657,
+        "y": 1548,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Lobulillo parietal inferior",
+        "x": 467,
+        "y": 1389,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Lobulillo parietal superior",
+        "x": 544,
+        "y": 1260,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion",
+        "x": 371,
+        "y": 1275,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion supramarginal",
+        "x": 320,
+        "y": 1160,
+        "width": 100,
+        "height": 100
+      },
+      {
+        "nombre": "Circunvolucion postcentral",
+        "x": 330,
+        "y": 992,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion precentral",
+        "x": 339,
+        "y": 840,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion frontal media",
+        "x": 464,
+        "y": 720,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion frontal superior",
+        "x": 645,
+        "y": 699,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Polo frontal",
+        "x": 627,
+        "y": 489,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cisura longitudinal del cerebro",
+        "x": 694,
+        "y": 506,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/15.png",
+    "sistema": "nervioso",
+    "region": "cabeza",
+    "partes": [
+      {
+        "nombre": "Surco olfatorio",
+        "x": 747,
+        "y": 468,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "quiasma optico",
+        "x": 720,
+        "y": 779,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Surco orbitarios",
+        "x": 993,
+        "y": 590,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Infundibulo",
+        "x": 776,
+        "y": 569,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "fosa lateral del cerebro",
+        "x": 1056,
+        "y": 668,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Trigono olfatorio",
+        "x": 790,
+        "y": 790,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Surco temporal inferior",
+        "x": 1051,
+        "y": 779,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cuerpo mamilar",
+        "x": 733,
+        "y": 881,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Pedunculo cerebral porcion anterior",
+        "x": 807,
+        "y": 939,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "substancia negra",
+        "x": 784,
+        "y": 967,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "surco del hipocampo",
+        "x": 827,
+        "y": 1004,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "tegmento mesencefalico",
+        "x": 756,
+        "y": 985,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "acueducto del mesencefalo",
+        "x": 716,
+        "y": 1024,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "esplenio del cuerpo calloso",
+        "x": 733,
+        "y": 1081,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Surco calcarino",
+        "x": 742,
+        "y": 1201,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Polo occipital",
+        "x": 611,
+        "y": 1503,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "fosa interpenduncular",
+        "x": 693,
+        "y": 901,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion del hipocampo",
+        "x": 617,
+        "y": 864,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "circunvoluciones orbiutarias",
+        "x": 517,
+        "y": 582,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Circunvolucion recta",
+        "x": 687,
+        "y": 528,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Polo frontal",
+        "x": 650,
+        "y": 371,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cisura longitudinal del cerebro",
+        "x": 716,
+        "y": 396,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/17.png",
+    "sistema": "esqueletico",
+    "region": "cuello",
+    "partes": [
+      {
+        "nombre": "Cartilago epiglotico",
+        "x": 546,
+        "y": 300,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "asta mayor del hueso hioides",
+        "x": 772,
+        "y": 292,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "asta menor del hueso hioides",
+        "x": 680,
+        "y": 326,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento tirohiodeo lateral",
+        "x": 768,
+        "y": 386,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "asta superior del cartilago tiroides",
+        "x": 784,
+        "y": 532,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cuerpo adiposo preepiglotico",
+        "x": 654,
+        "y": 586,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "asta inferior del cartilago tiroides",
+        "x": 720,
+        "y": 878,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "capsula articular cricotiroidea",
+        "x": 698,
+        "y": 944,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cartilagos traqueales",
+        "x": 632,
+        "y": 1142,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento cricotraqueal",
+        "x": 552,
+        "y": 1052,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "arco del cartilago cricoides",
+        "x": 548,
+        "y": 990,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento criocotiroideo medio",
+        "x": 528,
+        "y": 906,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "escotadura tiroidea superior",
+        "x": 544,
+        "y": 742,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "lamina derecha del cartilago tiroides",
+        "x": 408,
+        "y": 710,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento tiroideo medio",
+        "x": 542,
+        "y": 590,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "membrana tirohidea",
+        "x": 398,
+        "y": 458,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cuerpo del hueso tiroides",
+        "x": 1184,
+        "y": 416,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "membrana tirohidea",
+        "x": 1556,
+        "y": 442,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "orificio de la arteria laringea superior y ramo interno del nervio laringeo superior",
+        "x": 370,
+        "y": 536,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento criocofaringeo",
+        "x": 1614,
+        "y": 712,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "apofisis vocal del cartilago artenoides",
+        "x": 1494,
+        "y": 812,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Lamina del cartilago cricoides",
+        "x": 1570,
+        "y": 948,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cara articular tiroidea",
+        "x": 1522,
+        "y": 986,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cartilagos traqueales",
+        "x": 1362,
+        "y": 1092,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "arco cricoideo",
+        "x": 1342,
+        "y": 988,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento cricotiroideo medio",
+        "x": 1314,
+        "y": 942,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cono elastico",
+        "x": 1342,
+        "y": 856,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento vocal",
+        "x": 1370,
+        "y": 802,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cartilago tiroides",
+        "x": 1242,
+        "y": 796,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento tiroepliglotico",
+        "x": 1250,
+        "y": 698,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "peciolo de la epiglotis",
+        "x": 1294,
+        "y": 652,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento tirohideo medio",
+        "x": 1204,
+        "y": 580,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cartilago epiglotico",
+        "x": 1364,
+        "y": 484,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/19.png",
+    "sistema": "esqueletico",
+    "region": "cuello",
+    "partes": [
+      {
+        "nombre": "asta menor del hueso hioides",
+        "x": 1080,
+        "y": 328,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "asta mayor del hueso hioides",
+        "x": 1190,
+        "y": 280,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento tirohiodeo lateral",
+        "x": 1172,
+        "y": 382,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "membrana tirohioidea",
+        "x": 1148,
+        "y": 448,
+        "width": 50,
+        "height": 50
+      },{
+        "nombre": "asta superior del cartilago tiroides",
+        "x": 1186,
+        "y": 538,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cartilago corniculado",
+        "x": 976,
+        "y": 706,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "capsula articular cricotiroidea",
+        "x": 1038,
+        "y": 826,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "asta inferior del cartilago tiroides",
+        "x": 1128,
+        "y": 930,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "capsula articular cricotiroidea",
+        "x": 1104,
+        "y": 996,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento criocofaringeo",
+        "x": 938,
+        "y": 934,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamentos anulares",
+        "x": 1026,
+        "y": 1194,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "pared membranosa",
+        "x": 932,
+        "y": 1262,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "glandulas traqueales",
+        "x": 908,
+        "y": 1210,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cartilagos traqueales",
+        "x": 832,
+        "y": 1136,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento cricotraqueal",
+        "x": 858,
+        "y": 1120,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "capsula articular cricotiroidea",
+        "x": 784,
+        "y": 984,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento cricotiroideo posterior",
+        "x": 938,
+        "y": 796,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cartilago aritenoides",
+        "x": 884,
+        "y": 776,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Lamina del cartilago tiroides",
+        "x": 782,
+        "y": 722,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "peciolo de la epiglotis",
+        "x": 950,
+        "y": 658,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cuerpo adiposo preepiglotico",
+        "x": 838,
+        "y": 588,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cartilago epiglotico",
+        "x": 954,
+        "y": 374,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/21.png",
+    "sistema": "esqueletico",
+    "region": "columna",
+    "partes": [
+      {
+        "nombre": "proceso espinoso",
+        "x": 543,
+        "y": 189,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "raiz dorsal",
+        "x": 588,
+        "y": 447,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "vertebra",
+        "x": 678,
+        "y": 324,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ganglio espinal",
+        "x": 702,
+        "y": 453,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "cuerpo",
+        "x": 690,
+        "y": 690,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "rama comunicante",
+        "x": 291,
+        "y": 588,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "rama ventral",
+        "x": 216,
+        "y": 513,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "rama dorsal",
+        "x": 267,
+        "y": 393,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "raiz ventral",
+        "x": 444,
+        "y": 489,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "medula espinal",
+        "x": 510,
+        "y": 438,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "foramen neural",
+        "x": 1179,
+        "y": 441,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "disco intervertebral",
+        "x": 1032,
+        "y": 678,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "raiz dorsal sensorial",
+        "x": 996,
+        "y": 1104,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "raiz ventral motora",
+        "x": 1170,
+        "y": 1638,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "sustancia gris",
+        "x": 888,
+        "y": 1671,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "sustancia blanca",
+        "x": 573,
+        "y": 1647,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio mixto",
+        "x": 177,
+        "y": 1629,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ganglio espinal",
+        "x": 387,
+        "y": 1206,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/23.png",
+    "sistema": "esqueletico",
+    "region": "columna",
+    "partes": [
+      {
+        "nombre": "Surco medio Dorsal",
+        "x": 750,
+        "y": 97,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cordon Dorsal",
+        "x": 834,
+        "y": 162,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cordon Lateral",
+        "x": 982,
+        "y": 379,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cordon ventral",
+        "x": 844,
+        "y": 608,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Conducto Ependinario",
+        "x": 728,
+        "y": 382,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Surco Medio Ventral",
+        "x": 722,
+        "y": 631,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Asta Ventral",
+        "x": 473,
+        "y": 470,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Asta Lateral",
+        "x": 570,
+        "y": 349,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Asta Dorsal",
+        "x": 570,
+        "y": 245,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Surco Posterior",
+        "x": 705,
+        "y": 1039,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ramificaciones Posteriores",
+        "x": 864,
+        "y": 1208,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ganglio Raquidio",
+        "x": 968,
+        "y": 1419,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ramificaciones Anteriores",
+        "x": 690,
+        "y": 1430,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "duramadre",
+        "x": 457,
+        "y": 1615,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "aracnoiodes",
+        "x": 411,
+        "y": 1490,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "pimadre",
+        "x": 422,
+        "y": 1438,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/25.png",
+    "sistema": "esqueletico",
+    "region": "columna",
+    "partes": [
+      {
+        "nombre": "Filum Terminal",
+        "x": 702,
+        "y": 1070,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio espinal raiz anterior",
+        "x": 798,
+        "y": 1066,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ganglio espinal",
+        "x": 917,
+        "y": 1060,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio espinal raiz posterior",
+        "x": 800,
+        "y": 1078,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "aracnoiodes Espinal",
+        "x": 783,
+        "y": 1108,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Duramadre espinal",
+        "x": 753,
+        "y": 1134,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Espacio epidural",
+        "x": 744,
+        "y": 1153,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Periostio",
+        "x": 719,
+        "y": 1204,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ligamento Amarillo",
+        "x": 684,
+        "y": 1191,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Espacio subaracnoideo",
+        "x": 684,
+        "y": 1123,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "piamadre espinal",
+        "x": 661,
+        "y": 1109,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ramo medial",
+        "x": 465,
+        "y": 1301,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ramo lateral",
+        "x": 444,
+        "y": 1283,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio espinal ramo posterior",
+        "x": 433,
+        "y": 1218,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio espinal raiz anterior",
+        "x": 408,
+        "y": 1064,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio espinal ramo anterior",
+        "x": 456,
+        "y": 993,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ganglio del tronco simpatico",
+        "x": 452,
+        "y": 917,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ramo meningeo del nervio espinal",
+        "x": 589,
+        "y": 1038,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "plexo venoso vertebral interior anterior",
+        "x": 629,
+        "y": 1041,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ligamento longitudinal posterior",
+        "x": 700,
+        "y": 1018,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/27.png",
+    "sistema": "esqueletico",
+    "region": "columna",
+    "partes": [
+      {
+        "nombre": "sustancia blanca",
+        "x": 750,
+        "y": 320,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Zona de entrada de la raiz posterior",
+        "x": 806,
+        "y": 273,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cuerno posterior de la sustancia gris",
+        "x": 796,
+        "y": 327,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Cuerno anterior de la sustancia gris",
+        "x": 918,
+        "y": 423,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Filetes radiculares anteriores",
+        "x": 979,
+        "y": 1363,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Superficie de la medula espinal cubierta por la piamadre transparente",
+        "x": 877,
+        "y": 1549,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Raiz anterior",
+        "x": 476,
+        "y": 1444,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Raiz posterior",
+        "x": 464,
+        "y": 1414,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ramo anterior",
+        "x": 235,
+        "y": 1658,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Ramo posterior",
+        "x": 190,
+        "y": 1563,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "aracnoides",
+        "x": 376,
+        "y": 1467,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ligamento dentado",
+        "x": 469,
+        "y": 1319,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Duramadre",
+        "x": 325,
+        "y": 1057,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "vaina dural",
+        "x": 406,
+        "y": 718,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Piamadre",
+        "x": 567,
+        "y": 305,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  },
+  {
+    "imagen": "images/sin_nombres/29.png",
+    "sistema": "esqueletico",
+    "region": "columna",
+    "partes": [
+      {
+        "nombre": "Fosa romboidea",
+        "x": 731,
+        "y": 172,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco anterior del atlas",
+        "x": 770,
+        "y": 288,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ganglios espinales",
+        "x": 779,
+        "y": 403,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco de las VII vertebra cervical",
+        "x": 765,
+        "y": 550,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco de la I vertebra toracica",
+        "x": 787,
+        "y": 606,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "III costilla",
+        "x": 781,
+        "y": 679,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "VI Costilla",
+        "x": 781,
+        "y": 729,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Duramadre espinal",
+        "x": 737,
+        "y": 916,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco de la XII vertebra toracica",
+        "x": 754,
+        "y": 1175,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco de la I vertebra lumbar",
+        "x": 758,
+        "y": 1220,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "ganglio espinal",
+        "x": 769,
+        "y": 1378,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Arco de la V vertebra lumbar",
+        "x": 762,
+        "y": 1473,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso sacro",
+        "x": 757,
+        "y": 1679,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Filum terminal exterior",
+        "x": 706,
+        "y": 1758,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Hueso cocageo",
+        "x": 708,
+        "y": 1914,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervios cocageos",
+        "x": 693,
+        "y": 1776,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio sacro I",
+        "x": 663,
+        "y": 1564,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio lumbar I",
+        "x": 657,
+        "y": 1258,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio toracico I",
+        "x": 655,
+        "y": 620,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio Cervical I",
+        "x": 688,
+        "y": 262,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "Nervio hipogloso",
+        "x": 661,
+        "y": 221,
+        "width": 50,
+        "height": 50
+      },
+      {
+        "nombre": "nervio vago",
+        "x": 662,
+        "y": 200,
+        "width": 50,
+        "height": 50
+      }
+    ]
+  }
+]
