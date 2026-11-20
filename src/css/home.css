@@ -1,0 +1,295 @@
+/* ---------- Inicio ---------- */
+.welcome-card {
+    position: relative;
+    z-index: 2;
+    max-width: 540px;
+    margin: 0;
+    padding: 44px 40px 36px;
+    overflow: hidden;
+}
+
+.welcome-card > * { position: relative; z-index: 1; }
+
+/* Entrada escalonada de los hijos */
+.screen.active .welcome-card > :nth-child(1) { animation: rise .8s var(--ease) .10s both; }
+.screen.active .welcome-card > :nth-child(2) { animation: rise .8s var(--ease) .20s both; }
+.screen.active .welcome-card > :nth-child(3) { animation: rise .8s var(--ease) .30s both; }
+.screen.active .welcome-card > :nth-child(4) { animation: rise .8s var(--ease) .40s both; }
+.screen.active .welcome-card > :nth-child(5) { animation: rise .8s var(--ease) .50s both; }
+
+.welcome-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-family: var(--serif);
+    font-size: clamp(2.3rem, 5.5vw, 3.6rem);
+    font-weight: 500;
+    letter-spacing: -.03em;
+    line-height: 1.02;
+}
+
+.welcome-card h2 i { color: var(--accent); font-size: .6em; }
+
+.welcome-card > p { max-width: 50ch; color: var(--ink-dim); font-size: 1.05rem; }
+
+.settings {
+    margin: 36px 0 28px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--bg) 55%, transparent);
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    transition: background-color .25s;
+}
+.setting:hover { background: color-mix(in srgb, var(--surface-high) 50%, transparent); }
+.setting + .setting { border-top: 1px solid var(--line); }
+
+.setting label,
+.setting-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--ink-dim);
+}
+.setting label i,
+.setting-label i { color: var(--ink-muted); width: 16px; text-align: center; }
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 190px;
+    min-height: 44px;
+    padding: 10px 40px 10px 14px;
+    font: inherit;
+    font-size: .9rem;
+    color: var(--ink);
+    background-color: var(--surface-high);
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--ink-muted) 50%),
+        linear-gradient(135deg, var(--ink-muted) 50%, transparent 50%);
+    background-position: calc(100% - 20px) 52%, calc(100% - 14px) 52%;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color .25s, box-shadow .25s;
+}
+select:hover { border-color: var(--line-strong); }
+select:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow); outline: none; }
+
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--ink-dim);
+    font-size: .88rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    transition: transform .4s var(--ease), border-color .3s;
+}
+.stat:hover { transform: translateY(-3px); border-color: var(--accent); }
+.stat i { color: var(--accent); transition: transform .4s var(--spring); }
+.stat:hover i { transform: scale(1.25) rotate(-8deg); }
+
+/* ---------- Panel de dominio ---------- */
+.progress-card {
+    max-width: 780px;
+    margin: 20px auto 0;
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--surface);
+}
+.progress-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+.progress-head h3 { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 1.4rem; font-weight: 500; letter-spacing: -.01em; }
+.progress-head h3 i { color: var(--accent); font-size: .7em; }
+.progress-empty { color: var(--ink-muted); font-size: .92rem; }
+.progress-empty[hidden] { display: none; }
+.progress-bars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.bars-group h4 { margin-bottom: 10px; font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); }
+.bar-row { display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 12px; padding: 5px 0; font-size: .88rem; }
+.bar-name { color: var(--ink-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-track { height: 6px; border-radius: 999px; background: var(--surface-high); overflow: hidden; }
+.bar-fill { display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--accent-fill); transform-origin: left; animation: bar-grow 1.1s var(--ease) both; }
+@keyframes bar-grow { from { transform: scaleX(0); } to { transform: none; } }
+.bar-value { font-weight: 700; font-variant-numeric: tabular-nums; }
+.bar-value small { font-weight: 500; color: var(--ink-muted); }
+
+/* ---------- Inicio con escena 3D ---------- */
+.home-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1160px;
+    min-height: 760px;
+    margin: 0 auto;
+}
+
+/* Sobre la escena, la tarjeta es de cristal: hay algo real que desenfocar */
+.home-hero .welcome-card {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    backdrop-filter: blur(22px) saturate(150%);
+    border-color: var(--glass-line);
+    box-shadow: inset 0 1px 0 var(--glass-shine), var(--glass-shadow);
+}
+@media (prefers-reduced-transparency: reduce) {
+    .home-hero .welcome-card { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+.hero-stage {
+    position: absolute;
+    top: -30px;
+    bottom: -30px;
+    left: 34%;
+    right: -20px;
+    z-index: 1;
+    cursor: grab;
+    touch-action: pan-y;
+    transition: transform .7s var(--ease), opacity .7s var(--ease), filter .7s var(--ease);
+}
+.hero-stage { opacity: 0; }
+.hero-stage.live { opacity: 1; }
+.hero-stage[hidden] { display: none; }
+.hero-stage.dragging { cursor: grabbing; }
+.hero-stage.hovering { cursor: crosshair; }
+.hero-stage.diving { transform: scale(1.7); opacity: 0; filter: blur(10px); }
+
+#hero-canvas { display: block; width: 100%; height: 100%; }
+
+/* Retículo rojo: el mismo recuadro que hay que identificar en el quiz */
+.hero-reticle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: var(--size, 48px);
+    height: var(--size, 48px);
+    pointer-events: none;
+    will-change: transform;
+}
+.hero-reticle i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #ff3b30;
+    background: rgba(255, 59, 48, .12);
+    border-radius: 3px;
+    box-shadow: 0 0 22px rgba(255, 59, 48, .45);
+}
+.hero-reticle i::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 1.5px solid #ff3b30;
+    border-radius: 5px;
+    animation: ping 1.9s var(--ease) infinite;
+}
+.hero-reticle.lock i { animation: lock .55s var(--spring); }
+@keyframes lock { from { transform: scale(2.4); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.hero-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 6px 12px;
+    border: 1px solid var(--glass-line);
+    border-radius: 999px;
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    font-family: var(--mono);
+    font-size: .74rem;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    color: var(--ink-dim);
+    pointer-events: none;
+    will-change: transform;
+    transition: color .3s, border-color .3s;
+}
+.hero-tag.revealed { color: var(--accent); border-color: var(--accent); }
+
+.hero-hud {
+    position: absolute;
+    z-index: 3;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    pointer-events: none;
+}
+.hero-hud b { color: var(--accent); font-weight: 600; }
+.hud-tl { top: 38px; right: 20px; text-align: right; }
+.hud-br { bottom: 38px; right: 20px; text-align: right; }
+
+/* Titular: las letras suben en cascada */
+.split { display: inline-flex; }
+.split > span { display: inline-block; opacity: 0; transform: translateY(.6em) rotate(6deg); animation: letter .8s var(--spring) both; }
+@keyframes letter { to { opacity: 1; transform: none; } }
+
+/* Botón magnético con onda */
+#start-btn { transform: translate(var(--mx, 0), var(--my, 0)); }
+#start-btn:hover:not(:disabled) { transform: translate(var(--mx, 0), calc(var(--my, 0px) - 2px)); }
+.ripple {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .55);
+    pointer-events: none;
+    animation: ripple .7s var(--ease) forwards;
+}
+@keyframes ripple { to { transform: scale(26); opacity: 0; } }
+
+/* Foco de luz que sigue al cursor */
+.welcome-card::after,
+.progress-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(260px circle at var(--lx, 50%) var(--ly, 50%), var(--accent-glow), transparent 70%);
+    transition: opacity .4s;
+}
+.welcome-card:hover::after,
+.progress-card:hover::before { opacity: .55; }
+.progress-card { position: relative; overflow: hidden; }
+.progress-card > * { position: relative; }
+
+@media (max-width: 900px) {
+    .home-hero { flex-direction: column; align-items: stretch; min-height: 0; }
+    .hero-stage { position: relative; inset: auto; height: 360px; margin: -8px -8px -24px; order: -1; }
+    .welcome-card { max-width: none; }
+    .hud-tl, .hud-br { display: none; }
+}
+
+.home-hero .stat { padding: 11px 12px; gap: 9px; font-size: .8rem; }
+@media (max-width: 520px) { .quick-stats { grid-template-columns: 1fr; } }

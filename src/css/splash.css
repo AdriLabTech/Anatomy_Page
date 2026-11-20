@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Bienvenida a pantalla completa (antes de mostrar el inicio)
+   Revelado circular → radar → insignia con anillo → retículo que fija el logo →
+   título por palabras → cifras reales → cierre con línea de escáner.
+   Estados en <html data-splash>: on (visible, la web espera) · leaving (se retira,
+   la web ya anima) · ausente/off (oculta).
+   ========================================================================== */
+
+.splash {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    place-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--accent-fill);
+    color: var(--on-accent);
+    clip-path: circle(0% at 50% 46%);
+    animation: sp-reveal .85s var(--ease) forwards;
+    outline: none;
+}
+html[data-splash="on"] .splash,
+html[data-splash="leaving"] .splash { display: grid; }
+html[data-splash="leaving"] .splash { animation: sp-leave .8s cubic-bezier(.7, 0, .84, 0) forwards; }
+
+@keyframes sp-reveal { to { clip-path: circle(150% at 50% 46%); } }
+@keyframes sp-leave  { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 100% 0); } }
+
+/* Mientras la bienvenida está activa, la web de debajo espera: sus animaciones empiezan al retirarse */
+html[data-splash="on"] .container,
+html[data-splash="on"] .container *,
+html[data-splash="on"] .hero-stage { animation-play-state: paused !important; }
+
+/* Rejilla de puntos que se desvanece hacia los bordes */
+.splash::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .6;
+    background-image: radial-gradient(color-mix(in srgb, var(--on-accent) 26%, transparent) 1px, transparent 1.3px);
+    background-size: 26px 26px;
+    -webkit-mask-image: radial-gradient(circle at 50% 46%, #000 0, transparent 70%);
+    mask-image: radial-gradient(circle at 50% 46%, #000 0, transparent 70%);
+}
+
+/* Radar: un barrido gira detrás de la insignia */
+.sp-sweep {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: min(95vmin, 760px);
+    aspect-ratio: 1;
+    margin: calc(min(95vmin, 760px) / -2) 0 0 calc(min(95vmin, 760px) / -2);
+    border-radius: 50%;
+    pointer-events: none;
+    background: conic-gradient(from 0deg, transparent 0 292deg, color-mix(in srgb, var(--on-accent) 26%, transparent) 360deg);
+    -webkit-mask-image: radial-gradient(circle, #000 0, #000 60%, transparent 72%);
+    mask-image: radial-gradient(circle, #000 0, #000 60%, transparent 72%);
+    opacity: 0;
+    animation: sp-fade .8s ease .5s forwards, sp-spin 3.2s linear .5s infinite;
+}
+@keyframes sp-spin { to { transform: rotate(360deg); } }
+@keyframes sp-fade { to { opacity: 1; } }
+
+.sp-ring {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 220px;
+    height: 220px;
+    margin: -110px 0 0 -110px;
+    border-radius: 50%;
+    border: 2px solid color-mix(in srgb, var(--on-accent) 32%, transparent);
+    opacity: 0;
+    pointer-events: none;
+    animation: sp-pulse 2.6s var(--ease) infinite;
+}
+.sp-ring.r1 { animation-delay: .45s; }
+.sp-ring.r2 { animation-delay: .75s; }
+.sp-ring.r3 { animation-delay: 1.05s; }
+@keyframes sp-pulse { 0% { transform: scale(.5); opacity: .9; } 100% { transform: scale(7); opacity: 0; } }
+
+.sp-stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 980px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+/* Insignia: baldosa oscura con anillo que se dibuja y retículo rojo que la fija */
+.sp-badge { position: relative; width: 132px; height: 132px; margin-bottom: 18px; }
+.sp-logo {
+    position: absolute;
+    inset: 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+    background: var(--on-accent);
+    color: var(--accent-fill);
+    font-size: 38px;
+    transform: scale(0);
+    opacity: 0;
+    animation: sp-pop .7s var(--spring) .5s forwards;
+}
+.sp-logo i { font-size: 1em; }
+@keyframes sp-pop { to { transform: scale(1); opacity: 1; } }
+
+.sp-draw { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.sp-draw circle {
+    fill: none;
+    stroke: var(--on-accent);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 340;
+    stroke-dashoffset: 340;
+    animation: sp-stroke 1s var(--ease) .65s forwards;
+}
+@keyframes sp-stroke { to { stroke-dashoffset: 0; } }
+
+.sp-corner {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 0 solid #ff3b30;
+    opacity: 0;
+    animation: sp-lock .6s var(--spring) 1.05s forwards;
+    filter: drop-shadow(0 0 6px rgba(255, 59, 48, .55));
+}
+.sp-corner.tl { top: -6px;    left: -6px;  border-top-width: 4px;    border-left-width: 4px;  --x: -70px; --y: -70px; border-top-left-radius: 6px; }
+.sp-corner.tr { top: -6px;    right: -6px; border-top-width: 4px;    border-right-width: 4px; --x: 70px;  --y: -70px; border-top-right-radius: 6px; }
+.sp-corner.bl { bottom: -6px; left: -6px;  border-bottom-width: 4px; border-left-width: 4px;  --x: -70px; --y: 70px;  border-bottom-left-radius: 6px; }
+.sp-corner.br { bottom: -6px; right: -6px; border-bottom-width: 4px; border-right-width: 4px; --x: 70px;  --y: 70px;  border-bottom-right-radius: 6px; }
+@keyframes sp-lock { from { opacity: 0; transform: translate(var(--x), var(--y)) scale(1.8); } to { opacity: 1; transform: none; } }
+
+/* Destello al fijar */
+.sp-badge::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border: 2px solid #ff3b30;
+    border-radius: 12px;
+    opacity: 0;
+    animation: sp-flash .9s var(--ease) 1.6s;
+}
+@keyframes sp-flash { 0% { opacity: .9; transform: scale(1); } 100% { opacity: 0; transform: scale(1.7); } }
+
+.sp-eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .6em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: sp-eyebrow 1s var(--ease) .95s forwards;
+}
+@keyframes sp-eyebrow { from { opacity: 0; letter-spacing: .6em; } to { opacity: .75; letter-spacing: .24em; } }
+
+.sp-title {
+    margin: 4px 0 6px;
+    font-family: var(--serif);
+    font-size: clamp(36px, 6.2vw, 80px);
+    font-weight: 500;
+    line-height: 1.03;
+    letter-spacing: -.035em;
+}
+.sp-title .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .12em; }
+.sp-title .w > span { display: inline-block; transform: translateY(110%); animation: sp-up .85s var(--ease) forwards; }
+@keyframes sp-up { to { transform: none; } }
+
+.sp-sub { margin: 0; font-size: 15px; opacity: 0; animation: sp-in .8s ease 1.7s forwards; }
+@keyframes sp-in { to { opacity: .8; } }
+
+.sp-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; min-height: 36px; margin-top: 14px; }
+.sp-pill {
+    padding: 6px 15px;
+    border: 1px solid color-mix(in srgb, var(--on-accent) 30%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--on-accent) 12%, transparent);
+    font-size: 13px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    opacity: 0;
+    transform: translateY(10px) scale(.94);
+    animation: sp-pill .6s var(--spring) forwards;
+}
+.sp-pill.bad { background: var(--on-accent); color: var(--accent-fill); border-color: var(--on-accent); }
+@keyframes sp-pill { to { opacity: 1; transform: none; } }
+
+.sp-skip { position: absolute; bottom: 26px; font-size: 12px; letter-spacing: .05em; opacity: 0; animation: sp-in 1s ease 2.4s forwards; }
+.sp-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: color-mix(in srgb, var(--on-accent) 14%, transparent); }
+.sp-bar i { display: block; width: 100%; height: 100%; background: var(--on-accent); transform-origin: left; transform: scaleX(0); animation: sp-fill 4.3s linear .8s forwards; }
+@keyframes sp-fill { to { transform: scaleX(1); } }
+
+/* Línea de escáner que enrolla la pantalla hacia arriba (misma curva que el cierre) */
+.sp-line {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 3001;
+    height: 3px;
+    background: var(--on-accent);
+    box-shadow: 0 0 22px 2px var(--accent-fill), 0 0 60px 6px var(--accent-glow);
+    pointer-events: none;
+}
+html[data-splash="leaving"] .sp-line { display: block; animation: sp-scan .8s cubic-bezier(.7, 0, .84, 0) forwards; }
+@keyframes sp-scan { from { top: 100%; } to { top: 0; } }
+
+@media (max-width: 520px) {
+    .sp-badge { width: 112px; height: 112px; }
+    .sp-eyebrow { letter-spacing: .3em; }
+}
+@media (prefers-reduced-motion: reduce) { .splash { display: none !important; } }

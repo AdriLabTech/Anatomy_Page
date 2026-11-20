@@ -3,32 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="Estudio interactivo de anatomía: identifica la estructura marcada en cada lámina.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23F2B33D'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%231D1300' stroke-width='2.5'/%3E%3C/svg%3E">
     <title>Estudio Interactivo de Anatomía</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        // Antes de pintar: aplica el tema elegido y decide si se muestra la bienvenida
+        // (?nosplash la omite; «reducir movimiento» también).
+        try {
+            var p = JSON.parse(localStorage.getItem('anatomyQuizPrefs') || '{}');
+            if (p.theme === 'light' || p.theme === 'dark') document.documentElement.dataset.theme = p.theme;
+            var w = p.welcome || 'session';
+            var seen = sessionStorage.getItem('anatomySplash') === '1';
+            var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (w !== 'off' && !calm && !(w === 'session' && seen) && location.search.indexOf('nosplash') < 0) {
+                document.documentElement.dataset.splash = 'on';
+            }
+        } catch (e) { /* sin almacenamiento */ }
+    </script>
+    <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+
+    <link rel="stylesheet" href="src/css/tokens.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/splash.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/quiz.css">
+    <link rel="stylesheet" href="src/css/results.css">
+    <link rel="stylesheet" href="src/css/overlays.css">
+    <link rel="stylesheet" href="src/css/takumi-footer.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 </head>
 <body>
+    <!-- Bienvenida: se ve desde el primer pintado (la decide el script de <head>) y cubre la web mientras carga -->
+    <div id="splash" class="splash" role="dialog" aria-modal="true" aria-label="Bienvenida" tabindex="-1">
+        <i class="sp-sweep"></i>
+        <i class="sp-ring r1"></i><i class="sp-ring r2"></i><i class="sp-ring r3"></i>
+        <div class="sp-stage">
+            <div class="sp-badge">
+                <svg class="sp-draw" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54"/></svg>
+                <div class="sp-logo"><i class="fas fa-brain" aria-hidden="true"></i></div>
+                <span class="sp-corner tl"></span><span class="sp-corner tr"></span>
+                <span class="sp-corner bl"></span><span class="sp-corner br"></span>
+            </div>
+            <span class="sp-eyebrow">Te damos la bienvenida</span>
+            <p class="sp-title" aria-label="Estudio Interactivo de Anatomía">
+                <span class="w" aria-hidden="true"><span style="animation-delay:1150ms">Estudio</span></span>
+                <span class="w" aria-hidden="true"><span style="animation-delay:1240ms">Interactivo</span></span>
+                <span class="w" aria-hidden="true"><span style="animation-delay:1330ms">de</span></span>
+                <span class="w" aria-hidden="true"><span style="animation-delay:1420ms">Anatomía</span></span>
+            </p>
+            <p class="sp-sub">Identifica cada estructura señalada en la lámina.</p>
+            <div class="sp-stats" id="splash-stats"></div>
+        </div>
+        <span class="sp-skip" id="splash-status">Pulsa para continuar</span>
+        <span class="sp-bar"><i></i></span>
+    </div>
+    <i id="splash-line" class="sp-line"></i>
+
     <div class="container">
         <header>
-            <h1><i class="fas fa-brain"></i> Estudio Interactivo de Anatomía</h1>
+            <h1><i class="fas fa-brain" aria-hidden="true"></i><span class="title-text">Estudio Interactivo de Anatomía</span></h1>
             <div class="stats">
                 <span id="progress">Pregunta: 0/0</span>
                 <span id="score">Puntuación: 0%</span>
+                <button type="button" id="theme-btn" class="icon-btn" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+                    <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+                </button>
             </div>
         </header>
 
         <main>
-            <!-- Pantalla de Inicio -->
-            <div id="start-screen" class="screen active">
+            <!-- Inicio -->
+            <section id="start-screen" class="screen active">
+              <div class="home-hero">
+                <!-- Escena 3D (decorativa): columna vertebral procedural; ver src/js/ui/hero3d.js -->
+                <div class="hero-stage" id="hero-stage" aria-hidden="true">
+                    <canvas id="hero-canvas"></canvas>
+                    <div class="hero-reticle" id="hero-reticle"><i></i></div>
+                    <div class="hero-tag" id="hero-tag"><span class="tag-text">¿Qué estructura es?</span></div>
+                    <div class="hero-hud hud-tl"><b>Sistema esquelético</b> · columna vertebral</div>
+                    <div class="hero-hud hud-br">Arrastra para girar · pasa el cursor por una vértebra</div>
+                </div>
+
                 <div class="welcome-card">
-                    <h2><i class="fas fa-book-medical"></i> Bienvenido</h2>
+                    <h2><i class="fas fa-book-medical" aria-hidden="true"></i> Bienvenido</h2>
                     <p>Estudia anatomía humana de forma interactiva mediante preguntas sobre imágenes médicas.</p>
-                    
+
                     <div class="settings">
                         <div class="setting">
-                            <label for="num-questions">
-                                <i class="fas fa-question-circle"></i> Número de preguntas:
-                            </label>
+                            <label for="num-questions"><i class="fas fa-question-circle" aria-hidden="true"></i> Número de preguntas</label>
                             <select id="num-questions">
                                 <option value="5">5 preguntas</option>
                                 <option value="10">10 preguntas</option>
@@ -41,230 +109,279 @@
                                 <option value="120">120 preguntas</option>
                             </select>
                         </div>
-                        
+
                         <div class="setting">
-                            <label for="quiz-mode">
-                                <i class="fas fa-gamepad"></i> Modo de estudio:
-                            </label>
+                            <label for="quiz-mode"><i class="fas fa-gamepad" aria-hidden="true"></i> Modo de estudio</label>
                             <select id="quiz-mode">
                                 <option value="mixed" selected>Mezclado</option>
                                 <option value="system">Por sistemas</option>
                                 <option value="region">Por regiones</option>
                             </select>
                         </div>
-                        
+
                         <div class="setting">
-                            <label>
-                                <i class="fas fa-history"></i> Progreso guardado:
-                            </label>
-                            <button id="clear-storage" class="btn-secondary">
-                                <i class="fas fa-trash-alt"></i> Limpiar
+                            <label for="typo-mode"><i class="fas fa-spell-check" aria-hidden="true"></i> Corrección</label>
+                            <select id="typo-mode">
+                                <option value="exact" selected>Exacta</option>
+                                <option value="typo">Permitir 1 errata</option>
+                            </select>
+                        </div>
+
+                        <div class="setting">
+                            <label for="welcome-mode"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Bienvenida</label>
+                            <div class="setting-actions">
+                                <select id="welcome-mode">
+                                    <option value="session" selected>Una vez por sesión</option>
+                                    <option value="always">Siempre al abrir</option>
+                                    <option value="off">Desactivada</option>
+                                </select>
+                                <button type="button" id="welcome-replay" class="btn-secondary" title="Ver la animación ahora">
+                                    <i class="fas fa-play" aria-hidden="true"></i> Ver
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="setting">
+                            <span class="setting-label"><i class="fas fa-history" aria-hidden="true"></i> Progreso guardado</span>
+                            <button type="button" id="clear-storage" class="btn-secondary">
+                                <i class="fas fa-trash-alt" aria-hidden="true"></i> Limpiar
                             </button>
                         </div>
                     </div>
-                    
-                    <button id="start-btn" class="btn-primary">
-                        <i class="fas fa-play"></i> Iniciar Quiz
+
+                    <button type="button" id="start-btn" class="btn-primary">
+                        <i class="fas fa-play" aria-hidden="true"></i> Iniciar Quiz
                     </button>
-                    
+
                     <div class="quick-stats">
-                        <div class="stat">
-                            <i class="fas fa-images"></i>
-                            <span id="total-images">0 imágenes</span>
-                        </div>
-                        <div class="stat">
-                            <i class="fas fa-tags"></i>
-                            <span id="total-parts">0 partes</span>
-                        </div>
-                        <div class="stat">
-                            <i class="fas fa-trophy"></i>
-                            <span id="best-score">Mejor: 0%</span>
-                        </div>
+                        <div class="stat"><i class="fas fa-images" aria-hidden="true"></i><span id="total-images">0 imágenes</span></div>
+                        <div class="stat"><i class="fas fa-tags" aria-hidden="true"></i><span id="total-parts">0 partes</span></div>
+                        <div class="stat"><i class="fas fa-trophy" aria-hidden="true"></i><span id="best-score">Mejor: 0%</span></div>
                     </div>
                 </div>
-            </div>
+              </div>
 
-            <!-- Pantalla del Quiz -->
-            <div id="quiz-screen" class="screen">
+                <div class="progress-card" id="progress-card">
+                    <div class="progress-head">
+                        <h3><i class="fas fa-chart-line" aria-hidden="true"></i> Tu dominio</h3>
+                        <button type="button" id="review-weak-btn" class="btn-secondary" disabled>
+                            <i class="fas fa-book" aria-hidden="true"></i> Repasar errores acumulados <span id="weak-count">(0)</span>
+                        </button>
+                    </div>
+                    <p id="progress-empty" class="progress-empty">Aún no hay datos: haz un quiz y aquí verás tu dominio por sistema y región.</p>
+                    <div id="progress-bars" class="progress-bars"></div>
+                </div>
+            </section>
+
+            <!-- Quiz -->
+            <section id="quiz-screen" class="screen">
+                <div id="progress-track" class="progress-track" aria-hidden="true"></div>
                 <div class="quiz-container">
-                    <!-- Panel izquierdo: Imagen -->
                     <div class="image-panel">
                         <div class="image-container">
                             <img id="anatomy-image" src="" alt="Imagen de anatomía">
                             <canvas id="highlight-canvas"></canvas>
+                            <div id="marker-clip" class="marker-clip"><div id="marker" class="marker"></div></div>
+                            <button type="button" id="zoom-btn" class="zoom-btn" aria-label="Ampliar lámina" title="Ampliar (Z)">
+                                <i class="fas fa-expand" aria-hidden="true"></i>
+                            </button>
                         </div>
                         <div class="image-info">
                             <span id="image-name"></span>
                             <span id="hint" class="hint">
-                                <i class="fas fa-lightbulb"></i> Pista: <span id="hint-text"></span>
+                                <i class="fas fa-lightbulb" aria-hidden="true"></i> Pista: <span id="hint-text"></span>
                             </span>
                         </div>
                     </div>
-                    
-                    <!-- Panel derecho: Preguntas y controles -->
+
                     <div class="question-panel">
                         <div class="question-header">
                             <h3 id="question-text">¿Qué parte anatómica está señalada?</h3>
                             <div class="timer">
-                                <i class="fas fa-clock"></i>
-                                <span id="timer">--:--</span>
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <span id="timer">0:00</span>
                             </div>
                         </div>
-                        
+
                         <div class="answer-form">
                             <div class="input-group">
-                                <input type="text" id="answer-input" 
-                                       placeholder="Escribe el nombre de la parte..." 
-                                       autocomplete="off"
-                                       autocapitalize="off">
-                                <button id="submit-btn" class="btn-primary">
-                                    <i class="fas fa-check"></i> Verificar
+                                <input type="text" id="answer-input" aria-label="Nombre de la parte señalada"
+                                       placeholder="Escribe el nombre de la parte..."
+                                       autocomplete="off" autocapitalize="off" spellcheck="false">
+                                <button type="button" id="submit-btn" class="btn-primary">
+                                    <i class="fas fa-check" aria-hidden="true"></i> Verificar
                                 </button>
                             </div>
-                            
-                            <div class="feedback" id="feedback">
+
+                            <div class="feedback" id="feedback" aria-live="polite">
                                 <div class="feedback-content">
-                                    <i class="fas fa-comment-medical"></i>
+                                    <i class="fas fa-comment-medical" aria-hidden="true"></i>
                                     <span id="feedback-text"></span>
                                 </div>
                                 <div class="suggestions" id="suggestions"></div>
                             </div>
                         </div>
-                        
+
                         <div class="navigation">
-                            <button id="skip-btn" class="btn-secondary">
-                                <i class="fas fa-forward"></i> Saltar
+                            <button type="button" id="skip-btn" class="btn-secondary">
+                                <i class="fas fa-forward" aria-hidden="true"></i> Saltar
                             </button>
                             <div class="nav-buttons">
-                                <button id="prev-btn" class="btn-secondary" disabled>
-                                    <i class="fas fa-arrow-left"></i> Anterior
+                                <button type="button" id="prev-btn" class="btn-secondary" disabled>
+                                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Anterior
                                 </button>
-                                <button id="next-btn" class="btn-primary">
-                                    Siguiente <i class="fas fa-arrow-right"></i>
+                                <button type="button" id="next-btn" class="btn-primary">
+                                    <span id="next-label">Siguiente</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Pantalla de Resumen -->
-            <div id="summary-screen" class="screen">
+                    <!-- Guía de primer uso (se muestra una vez) -->
+                    <div id="tutorial" class="tutorial" role="dialog" aria-labelledby="tutorial-title" hidden>
+                        <div class="tutorial-content">
+                            <h3 id="tutorial-title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Cómo funciona</h3>
+                            <p>El recuadro rojo marca la estructura que debes identificar.</p>
+                            <p>Escribe su nombre y pulsa «Verificar» o la tecla Enter. No importan las mayúsculas ni las tildes.</p>
+                            <button type="button" class="btn-secondary" id="close-tutorial">Entendido</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resultados -->
+            <section id="summary-screen" class="screen">
                 <div class="summary-card">
-                    <h2><i class="fas fa-chart-bar"></i> Resultados del Quiz</h2>
-                    
+                    <h2><i class="fas fa-chart-bar" aria-hidden="true"></i> Resultados del Quiz</h2>
+
                     <div class="score-display">
                         <div class="score-circle">
-                            <svg width="160" height="160">
-                                <circle cx="80" cy="80" r="70" stroke="#e0e0e0" stroke-width="12" fill="none"/>
-                                <circle id="score-circle" cx="80" cy="80" r="70" stroke="#4CAF50" 
-                                        stroke-width="12" fill="none" stroke-dasharray="439.82" 
-                                        stroke-dashoffset="439.82" transform="rotate(-90 80 80)"/>
-                                <text x="80" y="85" text-anchor="middle" font-size="28" font-weight="bold">
+                            <svg width="160" height="160" role="img" aria-label="Nota final">
+                                <circle cx="80" cy="80" r="70" stroke-width="12" fill="none"/>
+                                <circle id="score-circle" cx="80" cy="80" r="70" stroke-width="12" fill="none"
+                                        stroke-dasharray="439.82" stroke-dashoffset="439.82" transform="rotate(-90 80 80)"/>
+                                <text x="80" y="88" text-anchor="middle" font-size="34">
                                     <tspan id="final-score">0</tspan>%
                                 </text>
-                                <text x="80" y="110" text-anchor="middle" font-size="16" fill="#666">
-                                    Nota
-                                </text>
+                                <text x="80" y="112" text-anchor="middle">Nota</text>
                             </svg>
                         </div>
-                        
+
                         <div class="score-details">
-                            <h3>Estadísticas Detalladas</h3>
+                            <h3>Estadísticas detalladas</h3>
                             <div class="stats-grid">
                                 <div class="stat-card correct">
-                                    <i class="fas fa-check-circle"></i>
-                                    <div class="stat-info">
-                                        <span class="stat-label">Respuestas Correctas</span>
-                                        <span class="stat-value" id="correct-count">0</span>
-                                    </div>
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                    <div class="stat-info"><span class="stat-label">Respuestas correctas</span><span class="stat-value" id="correct-count">0</span></div>
                                 </div>
                                 <div class="stat-card incorrect">
-                                    <i class="fas fa-times-circle"></i>
-                                    <div class="stat-info">
-                                        <span class="stat-label">Respuestas Incorrectas</span>
-                                        <span class="stat-value" id="incorrect-count">0</span>
-                                    </div>
+                                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                    <div class="stat-info"><span class="stat-label">Respuestas incorrectas</span><span class="stat-value" id="incorrect-count">0</span></div>
                                 </div>
                                 <div class="stat-card skipped">
-                                    <i class="fas fa-forward"></i>
-                                    <div class="stat-info">
-                                        <span class="stat-label">Preguntas Saltadas</span>
-                                        <span class="stat-value" id="skipped-count">0</span>
-                                    </div>
+                                    <i class="fas fa-forward" aria-hidden="true"></i>
+                                    <div class="stat-info"><span class="stat-label">Preguntas saltadas</span><span class="stat-value" id="skipped-count">0</span></div>
                                 </div>
                                 <div class="stat-card time">
-                                    <i class="fas fa-clock"></i>
-                                    <div class="stat-info">
-                                        <span class="stat-label">Tiempo Total</span>
-                                        <span class="stat-value" id="total-time">0:00</span>
-                                    </div>
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <div class="stat-info"><span class="stat-label">Tiempo total</span><span class="stat-value" id="total-time">0:00</span></div>
                                 </div>
                             </div>
-                            
+
                             <div class="performance">
-                                <div class="performance-item">
-                                    <span>Porcentaje de Aciertos:</span>
-                                    <span id="accuracy-rate">0%</span>
-                                </div>
-                                <div class="performance-item">
-                                    <span>Preguntas por Minuto:</span>
-                                    <span id="questions-per-minute">0</span>
-                                </div>
-                                <div class="performance-item">
-                                    <span>Puntuación Final:</span>
-                                    <span id="final-grade">0/100</span>
-                                </div>
+                                <div class="performance-item"><span>Precisión (sobre las respondidas)</span><span id="accuracy-rate">0%</span></div>
+                                <div class="performance-item"><span>Tiempo medio por respuesta</span><span id="avg-time">—</span></div>
+                                <div class="performance-item"><span>Aciertos</span><span id="final-grade">0/0</span></div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="answers-review">
-                        <h3><i class="fas fa-list-check"></i> Detalle de Respuestas</h3>
+                        <h3><i class="fas fa-list-check" aria-hidden="true"></i> Detalle de respuestas</h3>
                         <div id="answers-list" class="answers-list"></div>
                     </div>
-                    
+
                     <div class="summary-actions">
-                        <button id="restart-btn" class="btn-primary">
-                            <i class="fas fa-redo"></i> Nuevo Quiz
-                        </button>
-                        <button id="review-btn" class="btn-secondary">
-                            <i class="fas fa-book"></i> Repasar Errores
-                        </button>
-                        <button id="download-btn" class="btn-secondary">
-                            <i class="fas fa-download"></i> Descargar Resultados
-                        </button>
+                        <button type="button" id="restart-btn" class="btn-primary"><i class="fas fa-redo" aria-hidden="true"></i> Nuevo Quiz</button>
+                        <button type="button" id="review-btn" class="btn-secondary"><i class="fas fa-book" aria-hidden="true"></i> Repasar Errores</button>
+                        <button type="button" id="download-btn" class="btn-secondary"><i class="fas fa-download" aria-hidden="true"></i> Descargar Resultados</button>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
 
         <footer>
-            <p>Sistema de Estudio de Anatomía Interactiva &copy; 2025</p>
+            <p>Sistema de Estudio de Anatomía Interactiva &copy; 2026</p>
             <div class="footer-links">
-                <a href="#" id="about-link"><i class="fas fa-info-circle"></i> Acerca de</a>
-                <a href="#" id="help-link"><i class="fas fa-question-circle"></i> Ayuda</a>
+                <a href="#" id="about-link"><i class="fas fa-info-circle" aria-hidden="true"></i> Acerca de</a>
+                <a href="#" id="help-link"><i class="fas fa-question-circle" aria-hidden="true"></i> Ayuda</a>
             </div>
         </footer>
     </div>
 
-    <!-- Modal de Información -->
+    <!-- Marca de Takumi-Organization: norma en https://takumi-organization.github.io/entidad/ -->
+    <footer class="tk-footer" data-tema="oscuro">
+      <div class="tk-footer__in">
+        <a class="tk-footer__marca" href="https://takumi-organization.github.io" rel="noopener">Web desarrollada por Takumi-Organization</a>
+        <nav class="tk-footer__enlaces" aria-label="Información legal de Takumi-Organization">
+          <a href="https://takumi-organization.github.io/privacidad/" rel="noopener">Privacidad</a>
+          <a href="https://takumi-organization.github.io/terminos/" rel="noopener">Términos</a>
+          <a href="https://takumi-organization.github.io/licencias/" rel="noopener">Licencia</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Acerca de -->
     <div id="info-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h3><i class="fas fa-info-circle"></i> Acerca de</h3>
+        <div class="modal-content" role="dialog" aria-labelledby="info-title">
+            <button type="button" class="close-modal" aria-label="Cerrar">&times;</button>
+            <h3 id="info-title"><i class="fas fa-info-circle" aria-hidden="true"></i> Acerca de</h3>
             <p>Esta aplicación está diseñada para ayudar en el estudio de anatomía humana mediante preguntas interactivas sobre imágenes médicas.</p>
             <p>Características:</p>
             <ul>
-                <li>Imágenes anatómicas con partes etiquetadas</li>
+                <li>Imágenes anatómicas con partes señaladas</li>
                 <li>Sistema de preguntas aleatorias</li>
                 <li>Feedback inmediato</li>
                 <li>Seguimiento de progreso</li>
                 <li>Posibilidad de repaso</li>
             </ul>
+            <p class="modal-subtitle">Atajos de teclado</p>
+            <ul class="shortcuts">
+                <li><kbd>Enter</kbd> verificar y, después, continuar</li>
+                <li><kbd>Alt</kbd> + <kbd>←</kbd> / <kbd>→</kbd> pregunta anterior / siguiente</li>
+                <li><kbd>Alt</kbd> + <kbd>S</kbd> saltar · <kbd>Alt</kbd> + <kbd>Z</kbd> ampliar la lámina</li>
+                <li><kbd>Esc</kbd> cerrar ventanas</li>
+            </ul>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Lámina ampliada: rueda para ampliar, arrastrar para mover, doble clic para restablecer -->
+    <div id="zoom" class="zoom" role="dialog" aria-label="Lámina ampliada" hidden>
+        <div id="zoom-stage" class="zoom-stage">
+            <img id="zoom-image" alt="">
+            <div id="zoom-box" class="zoom-box"></div>
+        </div>
+        <div class="zoom-bar">
+            <button type="button" id="zoom-out" class="icon-btn" aria-label="Alejar"><i class="fas fa-magnifying-glass-minus" aria-hidden="true"></i></button>
+            <button type="button" id="zoom-reset" class="icon-btn" aria-label="Restablecer"><i class="fas fa-rotate-left" aria-hidden="true"></i></button>
+            <button type="button" id="zoom-in" class="icon-btn" aria-label="Acercar"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+            <span class="zoom-tip">Rueda para ampliar · arrastra para mover · doble clic para restablecer</span>
+            <button type="button" id="zoom-close" class="icon-btn" aria-label="Cerrar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <!-- Confirmaciones y avisos -->
+    <dialog id="confirm-dialog" class="confirm">
+        <form method="dialog">
+            <p id="confirm-text"></p>
+            <div class="confirm-actions">
+                <button value="cancel" class="btn-secondary">Cancelar</button>
+                <button value="ok" class="btn-primary">Aceptar</button>
+            </div>
+        </form>
+    </dialog>
+    <div id="toasts" class="toasts" aria-live="polite"></div>
+
+    <script type="module" src="src/js/main.js"></script>
 </body>
 </html>

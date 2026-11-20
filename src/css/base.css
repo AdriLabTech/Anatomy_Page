@@ -1,0 +1,156 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    position: relative;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 24px 24px;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Foco de luz suave sobre la rejilla, sin colores de moda */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(60% 45% at 50% -10%, var(--accent-glow), transparent 70%);
+    opacity: .5;
+}
+
+i.fas, i.far { font-size: .92em; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 16px 20px 32px; }
+
+/* ---------- Cabecera (cristal) ---------- */
+header {
+    position: sticky;
+    top: 12px;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    margin-bottom: 40px;
+    padding: 12px 16px 12px 18px;
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    backdrop-filter: blur(22px) saturate(150%);
+    border: 1px solid var(--glass-line);
+    border-radius: 20px;
+    box-shadow: inset 0 1px 0 var(--glass-shine), var(--glass-shadow);
+    animation: drop-in .8s var(--ease) both;
+}
+
+@keyframes drop-in {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: none; }
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+}
+
+h1 i {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 11px;
+    background: var(--accent-fill);
+    color: var(--on-accent);
+    font-size: 15px;
+}
+
+.stats { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.stats span {
+    padding: 6px 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    color: var(--ink-dim);
+    font-size: .8rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .01em;
+}
+
+/* ---------- Pantallas ---------- */
+.screen { display: none; }
+.screen.active { display: block; }
+
+.screen.active > * { animation: rise .8s var(--ease) both; }
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(22px) scale(.99); filter: blur(6px); }
+    to   { opacity: 1; transform: none; filter: none; }
+}
+
+/* ---------- Tarjetas ---------- */
+.welcome-card,
+.quiz-container,
+.summary-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+}
+
+/* ---------- Pie ---------- */
+footer { margin-top: 48px; text-align: center; color: var(--ink-muted); font-size: .8rem; animation: rise .8s var(--ease) .6s both; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 22px; margin-top: 8px; }
+.footer-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 32px;
+    color: var(--ink-dim);
+    text-decoration: none;
+    transition: color .25s;
+}
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 2px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s var(--ease);
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-links a:hover::after { transform: scaleX(1); }
+
+/* ---------- Botón de icono (tema, zoom) ---------- */
+.icon-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    color: var(--ink-dim);
+    cursor: pointer;
+    transition: transform .35s var(--spring), color .25s, border-color .25s;
+}
+.icon-btn:hover { color: var(--accent); border-color: var(--accent); transform: rotate(-12deg) scale(1.08); }
+.stats { align-items: center; }

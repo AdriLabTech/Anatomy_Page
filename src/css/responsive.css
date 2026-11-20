@@ -1,0 +1,48 @@
+/* ---------- Adaptable ---------- */
+@media (max-width: 992px) {
+    .quiz-container { grid-template-columns: 1fr; }
+    .image-panel { border-right: 0; border-bottom: 1px solid var(--line); }
+    #anatomy-image { max-height: 360px; }
+    .score-display { grid-template-columns: 1fr; justify-items: center; gap: 26px; }
+    .score-details { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 12px 16px 24px; }
+    header { top: 8px; flex-wrap: nowrap; gap: 10px; margin-bottom: 20px; padding: 8px 10px 8px 12px; border-radius: 16px; }
+    h1 { min-width: 0; font-size: .95rem; }
+    .title-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .stats { flex-shrink: 0; gap: 6px; }
+    .stats span { padding: 4px 9px; font-size: .72rem; }
+    .welcome-card { padding: 36px 22px 28px; }
+    .summary-card { padding: 30px 20px; }
+    .setting { flex-direction: column; align-items: stretch; gap: 10px; }
+    select { width: 100%; }
+    .question-panel { padding: 26px 20px; }
+    .question-header { flex-direction: column; gap: 12px; }
+    #question-text { font-size: 1.45rem; }
+    .input-group { flex-direction: column; }
+    #answer-input { width: 100%; }
+    .navigation { flex-direction: column; align-items: stretch; }
+    .nav-buttons { width: 100%; }
+    .nav-buttons button { flex: 1; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .summary-actions { flex-direction: column; }
+    .summary-actions button { width: 100%; }
+    .answer-item { align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    .title-text { display: none; }
+    .bar-row { grid-template-columns: 76px 1fr auto; gap: 8px; }
+    .progress-card { padding: 22px 18px; }
+    .zoom-tip { display: none; }
+    .image-panel { padding: 24px 16px 16px; }
+    #anatomy-image { max-height: 300px; }
+    .image-info { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+}
